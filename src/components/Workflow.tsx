@@ -4,42 +4,58 @@ import { X, ChevronDown } from 'lucide-react';
 const stages = [
   {
     number: 1,
-    tool: 'Claude',
-    label: 'Strategy & Planning',
+    tool: 'Claude Project',
+    label: 'Create Knowledge Base',
     bullets: [
-      'Write PRD',
-      'Create prompts',
-      'Plan architecture',
+      'Upload resume, writing samples, and portfolio pieces',
+      'Build context for AI-assisted development',
     ],
   },
   {
     number: 2,
-    tool: 'Claude Code',
-    label: 'Build & Iterate',
+    tool: 'Claude Chat',
+    label: 'Set Up Tooling & Draft Initial PRD',
     bullets: [
-      'Generate initial code',
-      'Integrated VS Code workflow',
-      'Fix bugs and fine-tune styling',
+      'Select tech stack and tools',
+      'Draft product requirements document',
+      'Define site structure and features',
     ],
   },
   {
     number: 3,
-    tool: 'GitHub',
-    label: 'Version Control',
+    tool: 'Lovable',
+    label: 'Generate V1 Prototype',
     bullets: [
-      'Store all code',
-      'Track changes',
-      'Source of truth',
+      'Rapidly generate initial working prototype',
+      'Establish baseline design and layout',
     ],
   },
   {
     number: 4,
+    tool: 'Claude Code in VS Code',
+    label: 'Build & Refine Full Site',
+    bullets: [
+      'Iterate on design and functionality',
+      'Fix bugs and fine-tune styling',
+      'Integrated AI-powered development workflow',
+    ],
+  },
+  {
+    number: 5,
+    tool: 'GitHub',
+    label: 'Store & Back Up Code',
+    bullets: [
+      'Version control and change tracking',
+      'Source of truth for codebase',
+    ],
+  },
+  {
+    number: 6,
     tool: 'Vercel',
-    label: 'Deploy',
+    label: 'Deploy Site',
     bullets: [
       'Auto-deploy on push',
-      'Live site',
-      'Custom domain',
+      'Live production site',
     ],
   },
 ];

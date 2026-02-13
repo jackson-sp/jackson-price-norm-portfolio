@@ -1,20 +1,18 @@
 {
   "routes": [
+    { "src": "^/assets/(.*)$", "dest": "/assets/$1" },
+
     {
-      "src": "/(.*\\.pdf)",
+      "src": "^/(.*\\.pdf)$",
       "headers": {
         "Content-Type": "application/pdf",
         "Accept-Ranges": "bytes"
       },
       "dest": "/$1"
     },
-    {
-      "src": "/(.*\\.(png|jpg|jpeg|webp|svg|gif|ico))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+
+    { "src": "^/(.*\\.(png|jpg|jpeg|webp|svg|gif|ico|css|js|map|json|txt|woff|woff2|ttf|eot))$", "dest": "/$1" },
+
+    { "src": "^/(.*)$", "dest": "/index.html" }
   ]
 }

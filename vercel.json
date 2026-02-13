@@ -8,14 +8,8 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*\\.(js|css|png|jpg|jpeg|webp|svg|gif|ico|pdf))",
-      "destination": "/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

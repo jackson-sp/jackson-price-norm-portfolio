@@ -3,8 +3,8 @@
     "name": "Jackson Price",
     "headline": "Jackson Price Portfolio for Norm AI",
     "intro": [
-      "University of Pennsylvania | MIT Sloan | MIT AI Club President | ex-Amazon",
-      "Product Marketing | Strategic Communications | Tech Storytelling"
+      "MIT Sloan MBA | MIT AI Club President | University of Pennsylvania | ex-Amazon",
+      "Product | Marketing | Storytelling"
     ],
     "email": "mailto:jprice26@mit.edu",
     "linkedin": "https://www.linkedin.com/in/jacksonshawprice"
@@ -97,33 +97,6 @@
           "file": "",
           "thumbnail": "/portfolio-assets/thought-leadership/forbes.png",
           "externalUrl": "https://www.forbes.com/councils/forbesbusinesscouncil/2022/12/28/enterprises-path-to-non-linearity-in-data/"
-        }
-      ]
-    },
-    {
-      "id": "pmm-templates",
-      "title": "Product Marketing Templates",
-      "items": [
-        {
-          "id": "battlecards",
-          "title": "Battlecards",
-          "subheader": "",
-          "file": "/portfolio-assets/pmm-templates/battlecards.pdf",
-          "thumbnail": "/portfolio-assets/pmm-templates/battlecards.png"
-        },
-        {
-          "id": "personas",
-          "title": "Personas",
-          "subheader": "",
-          "file": "/portfolio-assets/pmm-templates/personas.pdf",
-          "thumbnail": "/portfolio-assets/pmm-templates/personas.png"
-        },
-        {
-          "id": "messaging",
-          "title": "Messaging",
-          "subheader": "",
-          "file": "/portfolio-assets/pmm-templates/messaging.pdf",
-          "thumbnail": "/portfolio-assets/pmm-templates/messaging.png"
         }
       ]
     }

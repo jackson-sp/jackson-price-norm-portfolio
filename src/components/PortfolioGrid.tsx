@@ -1,53 +1,68 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
 import PDFModal from './PDFModal';
+import PageContainer from './layout/PageContainer';
+import ResponsiveGrid from './layout/ResponsiveGrid';
 import content from '../data/content.json';
 
 interface PortfolioItem {
   id: string;
   title: string;
   subheader: string;
-  file: string;
+  file?: string;
   thumbnail: string;
   externalUrl?: string;
+  route?: string;
 }
 
 const PortfolioGrid = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const navigate = useNavigate();
 
   const handleItemClick = (item: PortfolioItem) => {
+    if (item.route) {
+      navigate(item.route);
+      return;
+    }
     if (item.externalUrl) {
       window.open(item.externalUrl, '_blank', 'noopener,noreferrer');
-    } else {
+      return;
+    }
+    if (item.file) {
       setSelectedItem(item);
     }
   };
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 pb-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="pb-16">
+      <PageContainer>
         {content.categories.map((category) => (
           <div key={category.id} className="mb-12">
             <h2 className="text-2xl font-bold text-norm-500 mb-6 pb-2 border-b-2 border-norm-100">
               {category.title}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ResponsiveGrid>
               {category.items.map((item: PortfolioItem) => (
                 <PortfolioCard
                   key={item.id}
                   title={item.title}
                   subheader={item.subheader}
-                  thumbnail={item.thumbnail}
-                  isExternal={!!item.externalUrl}
+                  thumbnail={
+                    item.id === 'enterprise-blockchain'
+                      ? '/portfolio-assets/benchmark-reports/casper-labs.png'
+                      : item.thumbnail
+                  }
+                  isExternal={!!item.externalUrl || !!item.route}
                   onClick={() => handleItemClick(item)}
                 />
               ))}
-            </div>
+            </ResponsiveGrid>
           </div>
         ))}
-      </div>
+      </PageContainer>
 
-      {selectedItem && (
+      {selectedItem && selectedItem.file && (
         <PDFModal
           file={selectedItem.file}
           title={selectedItem.title}

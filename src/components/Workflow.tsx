@@ -5,58 +5,38 @@ const stages = [
   {
     number: 1,
     tool: 'Claude Project',
-    label: 'Create Knowledge Base',
-    bullets: [
-      'Upload resume, writing samples, and portfolio pieces',
-      'Build context for AI-assisted development',
-    ],
+    label: 'Create knowledge base',
+    bullets: [],
   },
   {
     number: 2,
     tool: 'Claude Chat',
-    label: 'Set Up Tooling & Draft Initial PRD',
-    bullets: [
-      'Select tech stack and tools',
-      'Draft product requirements document',
-      'Define site structure and features',
-    ],
+    label: 'Set up tooling & draft initial PRD',
+    bullets: [],
   },
   {
     number: 3,
     tool: 'Lovable',
-    label: 'Generate V1 Prototype',
-    bullets: [
-      'Rapidly generate initial working prototype',
-      'Establish baseline design and layout',
-    ],
+    label: 'Generate V1 prototype',
+    bullets: [],
   },
   {
     number: 4,
     tool: 'Claude Code in VS Code',
-    label: 'Build & Refine Full Site',
-    bullets: [
-      'Iterate on design and functionality',
-      'Fix bugs and fine-tune styling',
-      'Integrated AI-powered development workflow',
-    ],
+    label: 'Build & refine full site',
+    bullets: ['Alternate with ChatGPT and Cursor when credits run out'],
   },
   {
     number: 5,
     tool: 'GitHub',
-    label: 'Store & Back Up Code',
-    bullets: [
-      'Version control and change tracking',
-      'Source of truth for codebase',
-    ],
+    label: 'Store & back up code',
+    bullets: [],
   },
   {
     number: 6,
     tool: 'Vercel',
-    label: 'Deploy Site',
-    bullets: [
-      'Auto-deploy on push',
-      'Live production site',
-    ],
+    label: 'Deploy site',
+    bullets: [],
   },
 ];
 
@@ -128,14 +108,16 @@ const Workflow = () => {
                         <span className="text-lg font-semibold text-norm-500">{stage.tool}</span>
                         <span className="text-sm text-gray-500">- {stage.label}</span>
                       </div>
-                      <ul className="space-y-1 mb-2">
-                        {stage.bullets.map((bullet, i) => (
-                          <li key={i} className="text-sm text-gray-600 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                            {bullet}
-                          </li>
-                        ))}
-                      </ul>
+                      {stage.bullets.length > 0 && (
+                        <ul className="space-y-1 mb-2">
+                          {stage.bullets.map((bullet, i) => (
+                            <li key={i} className="text-sm text-gray-600 flex items-center gap-2">
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
 

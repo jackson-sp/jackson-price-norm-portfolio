@@ -1,27 +1,20 @@
 {
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*\\.pdf)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/pdf"
-        },
-        {
-          "key": "Accept-Ranges",
-          "value": "bytes"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*\\.(pdf|png|jpg|jpeg|webp|svg|gif|ico))",
-      "destination": "/$1"
+      "src": "/(.*\\.pdf)",
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Accept-Ranges": "bytes"
+      },
+      "dest": "/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*\\.(png|jpg|jpeg|webp|svg|gif|ico))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }

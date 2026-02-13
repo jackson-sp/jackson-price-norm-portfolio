@@ -4,7 +4,7 @@ import { X, Download, Loader2 } from "lucide-react";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
+pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
 
 interface PDFModalProps {
   file: string;
@@ -92,14 +92,18 @@ const PDFModal = ({ file, title, onClose }: PDFModalProps) => {
           <Document
             file={file}
             onLoadSuccess={onDocumentLoadSuccess}
+            onLoadError={(err) => {
+              console.error("react-pdf load error:", err);
+              setLoading(false);
+            }}
             loading=""
             error={
               <div className="flex flex-col items-center justify-center h-64 text-gray-500">
-                <p className="text-lg font-medium">PDF not available yet</p>
-                <p className="text-sm mt-2">This file will be added soon.</p>
+                <p className="text-lg font-medium">PDF failed to render</p>
+                <p className="text-sm mt-2">Check Console for details.</p>
               </div>
             }
-          >
+>
             {Array.from(new Array(numPages), (_, index) => (
               <div key={`page_${index + 1}`} className="mb-4 shadow-lg rounded-lg overflow-hidden bg-white">
                 <Page

@@ -1,13 +1,4 @@
 {
-  "headers": [
-    {
-      "source": "/(.*\\.pdf)",
-      "headers": [
-        { "key": "Content-Type", "value": "application/pdf" },
-        { "key": "Accept-Ranges", "value": "bytes" }
-      ]
-    }
-  ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }

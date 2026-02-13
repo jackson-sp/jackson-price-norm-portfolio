@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Linkedin } from 'lucide-react';
+import { FileText, Mail, Linkedin } from 'lucide-react';
 import content from '../data/content.json';
 
 const Header = () => {
@@ -20,6 +20,14 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex items-center gap-4">
+            <a
+              href="/Jackson Price Resume.pdf"
+              download
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-norm-500 transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              Resume
+            </a>
             <a
               href={content.profile.email}
               className="text-gray-500 hover:text-norm-500 transition-colors"

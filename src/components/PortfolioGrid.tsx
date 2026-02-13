@@ -64,10 +64,11 @@ const PortfolioGrid = () => {
 
       {selectedItem && selectedItem.file && (
         <PDFModal
-          file={selectedItem.file}
+          file={encodeURI(selectedItem.file)}
           title={selectedItem.title}
           onClose={() => setSelectedItem(null)}
         />
+
       )}
     </section>
   );

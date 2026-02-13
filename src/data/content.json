@@ -18,21 +18,21 @@
           "id": "ai-club-survey",
           "title": "AI Club Member Survey",
           "subheader": "MIT Sloan",
-          "file": "/portfolio-assets/slides/ai-club-survey.pdf",
+          "file": "/pdfs/ai-club-survey.pdf",
           "thumbnail": "/portfolio-assets/slides/ai-club-survey.png"
         },
         {
           "id": "product-design",
           "title": "Product Design Class Presentation",
           "subheader": "MIT Sloan",
-          "file": "/portfolio-assets/slides/product-design.pdf",
+          "file": "/pdfs/product-design.pdf",
           "thumbnail": "/portfolio-assets/slides/product-design.png"
         },
         {
           "id": "operations-analytics",
           "title": "Operations Analytics Class Presentation",
           "subheader": "MIT Sloan",
-          "file": "/portfolio-assets/slides/wildfires.pdf",
+          "file": "/pdfs/wildfires.pdf",
           "thumbnail": "/portfolio-assets/slides/wildfires.png"
         }
       ]
@@ -45,21 +45,21 @@
           "id": "inventory-management",
           "title": "Inventory Management",
           "subheader": "Netstock",
-          "file": "/portfolio-assets/benchmark-reports/netstock.pdf",
+          "file": "/pdfs/netstock.pdf",
           "thumbnail": "/portfolio-assets/benchmark-reports/netstock.png"
         },
         {
           "id": "trucking-logistics",
           "title": "Trucking and Logistics",
           "subheader": "Uber Freight",
-          "file": "/portfolio-assets/benchmark-reports/uber-freight.pdf",
+          "file": "/pdfs/uber-freight.pdf",
           "thumbnail": "/portfolio-assets/benchmark-reports/uber-freight.png"
         },
         {
           "id": "enterprise-blockchain",
           "title": "Enterprise Blockchain",
           "subheader": "Casper Labs",
-          "file": "/portfolio-assets/benchmark-reports/casper-labs.pdf",
+          "file": "/pdfs/casper-labs.pdf",
           "thumbnail": "/portfolio-assets/benchmark-reports/casper-labs.png"
         }
       ]

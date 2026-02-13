@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import workerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
 import { X, Download, Loader2 } from "lucide-react";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
 interface PDFModalProps {
   file: string;
@@ -90,20 +91,23 @@ const PDFModal = ({ file, title, onClose }: PDFModalProps) => {
             </div>
           )}
           <Document
-            file={file}
+            key={file}
+            file={{ url: file }}
             onLoadSuccess={onDocumentLoadSuccess}
             onLoadError={(err) => {
               console.error("react-pdf load error:", err);
               setLoading(false);
             }}
-            loading=""
+            loading={null}
             error={
               <div className="flex flex-col items-center justify-center h-64 text-gray-500">
                 <p className="text-lg font-medium">PDF failed to render</p>
-                <p className="text-sm mt-2">Check Console for details.</p>
+                <p className="text-sm mt-2 break-all">URL: {file}</p>
+                <p className="text-sm mt-2">Open Console for the exact error.</p>
               </div>
             }
->
+          >
+
             {Array.from(new Array(numPages), (_, index) => (
               <div key={`page_${index + 1}`} className="mb-4 shadow-lg rounded-lg overflow-hidden bg-white">
                 <Page

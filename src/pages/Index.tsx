@@ -13,8 +13,8 @@ const Index = () => {
       <main>
         <Hero />
         <CaseStudies />
-        <PortfolioGrid />
         <HomeGenerators />
+        <PortfolioGrid />
         <Workflow />
       </main>
       <Footer />

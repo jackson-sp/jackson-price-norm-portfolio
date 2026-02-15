@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import CaseStudies from '../components/CaseStudies';
 import HomeGenerators from '../components/HomeGenerators';
 import PortfolioGrid from '../components/PortfolioGrid';
 import Workflow from '../components/Workflow';
@@ -11,8 +12,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <CaseStudies />
         <PortfolioGrid />
-        <Generators />
+        <HomeGenerators />
         <Workflow />
       </main>
       <Footer />

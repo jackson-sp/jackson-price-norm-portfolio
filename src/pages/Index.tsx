@@ -11,8 +11,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <HomeGenerators />
         <PortfolioGrid />
+        <Generators />
         <Workflow />
       </main>
       <Footer />

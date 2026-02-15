@@ -35,10 +35,13 @@ const PortfolioGrid = () => {
   };
 
   return (
-    <section className="pb-16">
+    <section className="pb-8">
       <PageContainer>
-        {content.categories.map((category) => (
-          <div key={category.id} className="mb-12">
+      {content.categories.map((category, idx) => (
+  <div
+    key={category.id}
+    className={idx === content.categories.length - 1 ? 'mb-0' : 'mb-12'}
+  >
             <h2 className="text-2xl font-bold text-norm-500 mb-6 pb-2 border-b-2 border-norm-100">
               {category.title}
             </h2>

@@ -86,7 +86,6 @@ export default function CaseStudies() {
             <div className="flex justify-between items-start px-6 py-4 border-b">
                 <div className="pr-4">
               <h3 className="text-lg font-bold">{active.title}</h3>
-              <p className="text-xs text-gray-500">debug id: {active.id}</p>
             </div>
               <button onClick={() => setActive(null)}>
                 <X className="w-5 h-5" />

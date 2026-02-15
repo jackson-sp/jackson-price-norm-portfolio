@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import PageContainer from './layout/PageContainer';
-import ResponsiveGrid from './layout/ResponsiveGrid';
 
 type CaseStudy = {
   id: string;
@@ -22,9 +21,9 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'waabi',
     title:
-      'Launching a self-driving startup from industry newcomer to Top-3 player',
+      'Launching a self-driving startup from industry newcomer to top-3 player',
     problem:
-      'Waabi, a Canadian self-driving startup founded by AI icon Raquel Urtasun, emerged out of stealth amidst high public mistrust of AV. Headlines of the incumbents\' failures put the entire industry under a microscope. Waabi was a no-name newcomer that needed airtight storytelling to elevate into a trusted partner.',
+      'Waabi, a Canadian self-driving startup founded by AI icon Raquel Urtasun, emerged out of stealth amidst high public mistrust of AV. Headlines of incumbents\' failures put the industry under a microscope. Waabi was a no-name newcomer that needed airtight storytelling to elevate into a trusted partner.',
     solution:
       'I owned the launch and positioning strategy for Waabi\'s $83.5M Series A fundraise and first several major product and partnership announcements. My storytelling brought Waabi to the industry forefront, and it ultimately raised an additional $200M in 2024 and $750M in 2026.',
   },
@@ -35,7 +34,7 @@ const caseStudies: CaseStudy[] = [
     problem:
       'Firmly.ai, an ecommerce startup with Fortune 500 customers, had momentum within the enterprise but wanted to expand into higher-ed. The company approached MIT Sloan looking for student help to bring their technology into university ecosystems.',
     solution:
-      'I conducted customer interviews and sourced potential retail partners to evaluate product-market fit. I also designed wireframes (using Figma) and delivered a PRD to a team of contracted engineers to create an MVP of a bespoke MIT-centric shopping hub. Firmly now has a clear GTM strategy to enter higher-ed and later expand beyond MIT.',
+      "I conducted customer interviews and sourced potential retail partners to evaluate product-market fit. I also designed wireframes (using Figma) and delivered a PRD to Firmly's engineering team to create an MVP of a bespoke MIT-centric shopping hub. Firmly now has a clear GTM strategy to enter higher-ed and later expand beyond MIT.",
   },
   {
     id: 'mobility',
@@ -50,6 +49,16 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudies() {
   const [active, setActive] = useState<CaseStudy | null>(null);
+  useEffect(() => {
+    if (!active) return;
+  
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActive(null);
+    };
+  
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [active]); 
 
   return (
     <section className="py-16">
@@ -58,24 +67,27 @@ export default function CaseStudies() {
           Growth and GTM Case Studies
         </h2>
 
-        <ResponsiveGrid>
-          {caseStudies.map((cs) => (
-            <button
-              key={cs.id}
-              onClick={() => setActive(cs)}
-              className="flex items-center justify-center w-full min-h-[90px] px-6 py-6 bg-white text-norm-500 text-sm font-semibold rounded-lg border border-norm-100 hover:bg-slate-50 transition shadow-sm text-center"
-            >
-              {cs.title}
-            </button>
-          ))}
-        </ResponsiveGrid>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  {caseStudies.map((cs) => (
+    <button
+      key={cs.id}
+      onClick={() => setActive(cs)}
+      className="flex items-center justify-center gap-2 w-full min-h-[90px] px-6 py-6 bg-norm-500 text-white text-lg font-bold rounded-lg hover:bg-norm-600 transition-colors shadow-sm text-center"
+    >
+      {cs.title}
+    </button>
+  ))}
+</div>
       </PageContainer>
 
       {active && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-white max-w-3xl w-full rounded-xl shadow-xl">
             <div className="flex justify-between items-start px-6 py-4 border-b">
+                <div className="pr-4">
               <h3 className="text-lg font-bold">{active.title}</h3>
+              <p className="text-xs text-gray-500">debug id: {active.id}</p>
+            </div>
               <button onClick={() => setActive(null)}>
                 <X className="w-5 h-5" />
               </button>
@@ -85,9 +97,31 @@ export default function CaseStudies() {
               <p className="mb-4">
                 <strong>Problem:</strong> {active.problem}
               </p>
-              <p>
-                <strong>Solution:</strong> {active.solution}
-              </p>
+              <p className="mb-2">
+                <strong>Solution:</strong> {active.id === 'firmly' ? (
+    <>
+      {"I conducted customer interviews and sourced potential retail partners to evaluate product-market fit. I also designed wireframes (using Figma) and delivered a PRD to Firmly's engineering team to create an "}
+      <a
+        href="https://mit-marketplace.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline font-semibold text-norm-600"
+      >
+        MVP of a bespoke MIT-centric shopping hub
+      </a>
+      {'. Firmly now has a clear GTM strategy to enter higher-ed and later expand beyond MIT.'}
+    </>
+  ) : (
+    active.solution
+  )}
+</p>
+
+{active.id === 'firmly' && (
+  <p className="text-xs text-gray-500">
+  <span className="font-semibold">MVP username:</span> mituser //{' '}
+  <span className="font-semibold">MVP password:</span> mit123
+</p>
+)}
             </div>
           </div>
         </div>

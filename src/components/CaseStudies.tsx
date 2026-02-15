@@ -64,7 +64,7 @@ export default function CaseStudies() {
     <section className="py-16">
       <PageContainer>
         <h2 className="text-2xl font-bold text-norm-500 mb-6 pb-2 border-b-2 border-norm-100">
-          Growth and GTM Case Studies
+          Growth Strategy Case Studies
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

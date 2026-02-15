@@ -14,7 +14,7 @@ export default function HomeGenerators() {
     <section className="py-12">
       <PageContainer>
         <h2 className="text-2xl font-bold text-norm-500 mb-6 pb-2 border-b-2 border-norm-100">
-          Document Templates
+          Product Marketing and GTM Templates
         </h2>
         <ResponsiveGrid>
           {generators.map(({ to, label }) => (

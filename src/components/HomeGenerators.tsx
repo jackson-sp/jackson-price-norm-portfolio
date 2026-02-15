@@ -11,7 +11,7 @@ const generators = [
 
 export default function HomeGenerators() {
   return (
-    <section className="py-12">
+    <section className="pt-4 pb-12">
       <PageContainer>
         <h2 className="text-2xl font-bold text-norm-500 mb-6 pb-2 border-b-2 border-norm-100">
           Product Marketing and GTM Templates

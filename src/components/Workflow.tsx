@@ -65,8 +65,8 @@ const Workflow = () => {
       <div className="flex justify-center py-8">
         <button
           onClick={() => setIsOpen(true)}
-          className="px-6 py-3 bg-norm-500 text-white font-medium rounded-lg hover:bg-norm-600 transition-colors shadow-sm"
-        >
+          className="px-6 py-3 bg-norm-600 text-white font-semibold rounded-lg hover:bg-norm-700 transition-colors shadow-md hover:shadow-lg"
+          >
           How I Created This Site
         </button>
       </div>
@@ -79,7 +79,7 @@ const Workflow = () => {
           <div className="relative bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl">
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between rounded-t-2xl z-10">
-              <h2 className="text-xl font-bold text-norm-500">How I Created This Site</h2>
+              <h2 className="text-xl font-bold text-norm-800">How I Created This Site</h2>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
@@ -99,20 +99,20 @@ const Workflow = () => {
                 >
                   <div className="flex gap-4 items-start">
                     {/* Number circle */}
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-norm-500 text-white flex items-center justify-center font-bold text-sm">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-norm-700 text-white flex items-center justify-center font-bold text-sm shadow-sm">
                       {stage.number}
                     </div>
                     {/* Content */}
                     <div className="flex-1 pb-2">
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-lg font-semibold text-norm-500">{stage.tool}</span>
+                        <span className="text-lg font-semibold text-norm-800">{stage.tool}</span>
                         <span className="text-sm text-gray-500">- {stage.label}</span>
                       </div>
                       {stage.bullets.length > 0 && (
                         <ul className="space-y-1 mb-2">
                           {stage.bullets.map((bullet, i) => (
                             <li key={i} className="text-sm text-gray-600 flex items-center gap-2">
-                              <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                              <span className="w-1.5 h-1.5 rounded-full bg-norm-500 flex-shrink-0" />
                               {bullet}
                             </li>
                           ))}
@@ -124,7 +124,7 @@ const Workflow = () => {
                   {/* Arrow between stages */}
                   {index < stages.length - 1 && (
                     <div className="flex justify-center py-2 ml-5">
-                      <ChevronDown className="w-5 h-5 text-norm-400 animate-bounce" />
+                      <ChevronDown className="w-5 h-5 text-norm-500 animate-bounce" />
                     </div>
                   )}
                 </div>

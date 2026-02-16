@@ -62,13 +62,13 @@ const PDFModal = ({ file, title, onClose }: PDFModalProps) => {
       <div className="relative bg-white rounded-2xl w-[95vw] h-[90vh] max-w-5xl flex flex-col overflow-hidden shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-white">
-          <h2 className="text-lg font-semibold text-norm-500 truncate pr-4">{title}</h2>
+          <h2 className="text-lg font-semibold text-norm-800 truncate pr-4">{title}</h2>
           <div className="flex items-center gap-3">
             <a
               href={file}
               download
-              className="inline-flex items-center gap-2 px-4 py-2 bg-norm-500 text-white text-sm font-medium rounded-lg hover:bg-norm-600 transition-colors"
-            >
+              className="inline-flex items-center gap-2 px-4 py-2 bg-norm-600 text-white text-sm font-semibold rounded-lg hover:bg-norm-700 transition-colors shadow-sm"
+              >
               <Download className="w-4 h-4" />
               Download
             </a>
@@ -89,7 +89,7 @@ const PDFModal = ({ file, title, onClose }: PDFModalProps) => {
         >
           {loading && (
             <div className="flex items-center justify-center h-full">
-              <Loader2 className="w-8 h-8 text-norm-500 animate-spin" />
+              <Loader2 className="w-8 h-8 text-norm-600 animate-spin" />
             </div>
           )}
           <Document

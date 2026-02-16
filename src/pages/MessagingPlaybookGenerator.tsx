@@ -128,7 +128,7 @@ export default function MessagingPlaybookGenerator() {
           <button
             type="button"
             onClick={handleExportPdf}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-norm-600 text-white hover:bg-norm-700 transition-colors text-sm font-medium"
           >
             <Download className="w-4 h-4" />
             Export PDF
@@ -142,7 +142,7 @@ export default function MessagingPlaybookGenerator() {
             type="text"
             value={data.yourName}
             onChange={(e) => update('yourName', e.target.value)}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PlaybookSection>
 
@@ -151,7 +151,7 @@ export default function MessagingPlaybookGenerator() {
             value={data.valueProposition}
             onChange={(e) => update('valueProposition', e.target.value)}
             rows={3}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PlaybookSection>
 
@@ -160,7 +160,7 @@ export default function MessagingPlaybookGenerator() {
             value={data.audience}
             onChange={(e) => update('audience', e.target.value)}
             rows={4}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PlaybookSection>
 
@@ -169,7 +169,7 @@ export default function MessagingPlaybookGenerator() {
             value={data.elevatorPitch}
             onChange={(e) => update('elevatorPitch', e.target.value)}
             rows={3}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PlaybookSection>
 
@@ -178,7 +178,7 @@ export default function MessagingPlaybookGenerator() {
             value={data.longDescription}
             onChange={(e) => update('longDescription', e.target.value)}
             rows={8}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PlaybookSection>
 
@@ -187,7 +187,7 @@ export default function MessagingPlaybookGenerator() {
             value={data.toneOfVoice}
             onChange={(e) => update('toneOfVoice', e.target.value)}
             rows={3}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PlaybookSection>
 
@@ -198,14 +198,14 @@ export default function MessagingPlaybookGenerator() {
                 type="text"
                 value={item}
                 onChange={(e) => updateOutcome(i, e.target.value)}
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
               />
             </div>
           ))}
           <button
             type="button"
             onClick={addOutcome}
-            className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium"
+            className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium"
           >
             <Plus className="w-4 h-4" /> Add another
           </button>
@@ -218,7 +218,7 @@ export default function MessagingPlaybookGenerator() {
                 type="text"
                 value={item}
                 onChange={(e) => updateCustomerRequirement(i, e.target.value)}
-                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
               />
             </div>
           ))}
@@ -226,7 +226,7 @@ export default function MessagingPlaybookGenerator() {
             <button
               type="button"
               onClick={addCustomerRequirement}
-              className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium"
+              className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium"
             >
               <Plus className="w-4 h-4" /> Add another
             </button>
@@ -241,16 +241,16 @@ export default function MessagingPlaybookGenerator() {
           <table className="w-full border-collapse border border-slate-300 text-left">
             <thead>
               <tr className="bg-slate-50">
-                <th className="border border-slate-300 p-2 text-sm font-semibold text-slate-700 w-48">
+                <th className="border border-slate-300 p-2 text-sm font-semibold text-norm-700 w-48">
                   {' '}
                 </th>
-                <th className="border border-slate-300 p-2 text-sm font-semibold text-slate-700">
+                <th className="border border-slate-300 p-2 text-sm font-semibold text-norm-700">
                   Pillar 1
                 </th>
-                <th className="border border-slate-300 p-2 text-sm font-semibold text-slate-700">
+                <th className="border border-slate-300 p-2 text-sm font-semibold text-norm-700">
                   Pillar 2
                 </th>
-                <th className="border border-slate-300 p-2 text-sm font-semibold text-slate-700">
+                <th className="border border-slate-300 p-2 text-sm font-semibold text-norm-700">
                   Pillar 3
                 </th>
               </tr>
@@ -258,7 +258,7 @@ export default function MessagingPlaybookGenerator() {
             <tbody>
               {PILLAR_ROW_LABELS.map((label, rowIndex) => (
                 <tr key={label}>
-                  <td className="border border-slate-300 p-2 text-sm font-medium text-slate-700 align-top bg-slate-50">
+                  <td className="border border-slate-300 p-2 text-sm font-medium text-norm-700 align-top bg-slate-50">
                     <span className="block">{label}</span>
                     <p className="text-xs text-slate-500 mt-1 font-normal">
                       {HELPER_TEXT.pillar[PILLAR_ROW_KEYS[rowIndex]]}
@@ -272,7 +272,7 @@ export default function MessagingPlaybookGenerator() {
                           updatePillar(colIndex, PILLAR_ROW_KEYS[rowIndex], e.target.value)
                         }
                         rows={rowIndex === 0 || rowIndex === 3 ? 3 : 6}
-                        className="w-full min-w-[140px] min-h-[4.5rem] px-2 py-1.5 rounded border border-slate-200 text-slate-800 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-y"
+                        className="w-full min-w-[140px] min-h-[4.5rem] px-2 py-1.5 rounded border border-slate-200 text-slate-800 text-sm focus:ring-2 focus:ring-norm-500 focus:border-norm-500 resize-y"
                       />
                     </td>
                   ))}

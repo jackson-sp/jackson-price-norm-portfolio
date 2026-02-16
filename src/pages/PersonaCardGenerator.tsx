@@ -86,7 +86,7 @@ export default function PersonaCardGenerator() {
           <button
             type="button"
             onClick={() => generatePersonaPdf(data)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-norm-600 text-white hover:bg-norm-700 transition-colors text-sm font-semibold shadow-sm"
           >
             <Download className="w-4 h-4" />
             Export PDF
@@ -95,162 +95,162 @@ export default function PersonaCardGenerator() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-10 space-y-8">
-        <h2 className="text-slate-700 font-semibold text-base border-b border-slate-200 pb-2">Identity & Background</h2>
+        <h2 className="text-norm-800 font-semibold text-base border-b border-slate-200 pb-2">Identity & Background</h2>
         <PersonaSection title="Name" helperText={HELPER.name}>
           <input
             type="text"
             value={data.name}
             onChange={(e) => update('name', e.target.value)}
-            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PersonaSection>
         <PersonaSection title="Bio" helperText={HELPER.bio}>
-          <textarea value={data.bio} onChange={(e) => update('bio', e.target.value)} rows={4} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.bio} onChange={(e) => update('bio', e.target.value)} rows={4} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Role in the Buying Process" helperText={HELPER.roleInBuyingProcess}>
           <textarea
             value={data.roleInBuyingProcess}
             onChange={(e) => update('roleInBuyingProcess', e.target.value)}
             rows={3}
-            className="w-full min-h-[4rem] resize-y px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800"
+            className="w-full min-h-[4rem] resize-y px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800"
           />
         </PersonaSection>
         <PersonaSection title="Background" helperText={HELPER.background}>
           <div className="space-y-3">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Title</label>
-              <input type="text" value={data.backgroundTitle ?? data.background} onChange={(e) => update('backgroundTitle', e.target.value)} placeholder="Job title" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Title</label>
+              <input type="text" value={data.backgroundTitle ?? data.background} onChange={(e) => update('backgroundTitle', e.target.value)} placeholder="Job title" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Reports to</label>
-              <input type="text" value={data.reportsTo ?? ''} onChange={(e) => update('reportsTo', e.target.value)} placeholder="Who they report to" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Reports to</label>
+              <input type="text" value={data.reportsTo ?? ''} onChange={(e) => update('reportsTo', e.target.value)} placeholder="Who they report to" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Number of reports</label>
-              <input type="text" value={data.numberOfReports ?? ''} onChange={(e) => update('numberOfReports', e.target.value)} placeholder="Team size" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Number of reports</label>
+              <input type="text" value={data.numberOfReports ?? ''} onChange={(e) => update('numberOfReports', e.target.value)} placeholder="Team size" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Purchasing Role</label>
-              <input type="text" value={data.purchasingRole ?? ''} onChange={(e) => update('purchasingRole', e.target.value)} placeholder="e.g. Decision maker, Influencer" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Purchasing Role</label>
+              <input type="text" value={data.purchasingRole ?? ''} onChange={(e) => update('purchasingRole', e.target.value)} placeholder="e.g. Decision maker, Influencer" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           </div>
         </PersonaSection>
         <PersonaSection title="Demographics" helperText={HELPER.demographics}>
           <div className="space-y-3">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Age</label>
-              <input type="text" value={data.age ?? ''} onChange={(e) => update('age', e.target.value)} placeholder="e.g. 35–44" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Age</label>
+              <input type="text" value={data.age ?? ''} onChange={(e) => update('age', e.target.value)} placeholder="e.g. 35–44" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Gender</label>
-              <input type="text" value={data.gender ?? ''} onChange={(e) => update('gender', e.target.value)} placeholder="If relevant to the market" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Gender</label>
+              <input type="text" value={data.gender ?? ''} onChange={(e) => update('gender', e.target.value)} placeholder="If relevant to the market" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Location</label>
-              <input type="text" value={data.location ?? data.demographics} onChange={(e) => update('location', e.target.value)} placeholder="Geographic location" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Location</label>
+              <input type="text" value={data.location ?? data.demographics} onChange={(e) => update('location', e.target.value)} placeholder="Geographic location" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           </div>
         </PersonaSection>
 
-        <h2 className="text-slate-700 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Company Profile</h2>
+        <h2 className="text-norm-800 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Company Profile</h2>
         <PersonaSection title="Industry" helperText={HELPER.industry}>
-          <input type="text" value={data.industry} onChange={(e) => update('industry', e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <input type="text" value={data.industry} onChange={(e) => update('industry', e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Size" helperText={HELPER.companySize}>
-          <input type="text" value={data.companySize} onChange={(e) => update('companySize', e.target.value)} placeholder="e.g. 50–200 employees" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <input type="text" value={data.companySize} onChange={(e) => update('companySize', e.target.value)} placeholder="e.g. 50–200 employees" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Revenue" helperText={HELPER.revenue}>
-          <input type="text" value={data.revenue} onChange={(e) => update('revenue', e.target.value)} placeholder="e.g. $10M–$50M annual" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <input type="text" value={data.revenue} onChange={(e) => update('revenue', e.target.value)} placeholder="e.g. $10M–$50M annual" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
 
-        <h2 className="text-slate-700 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Psychographics & Drivers</h2>
+        <h2 className="text-norm-800 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Psychographics & Drivers</h2>
         <PersonaSection title="Personality" helperText={HELPER.personality}>
-          <textarea value={data.personality} onChange={(e) => update('personality', e.target.value)} rows={3} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.personality} onChange={(e) => update('personality', e.target.value)} rows={3} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Responsibilities" helperText={HELPER.responsibilities}>
-          <textarea value={data.responsibilities} onChange={(e) => update('responsibilities', e.target.value)} rows={4} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.responsibilities} onChange={(e) => update('responsibilities', e.target.value)} rows={4} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Goals" helperText={HELPER.goals}>
-          <textarea value={data.goals} onChange={(e) => update('goals', e.target.value)} rows={3} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.goals} onChange={(e) => update('goals', e.target.value)} rows={3} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Challenges" helperText={HELPER.challenges}>
-          <textarea value={data.challenges} onChange={(e) => update('challenges', e.target.value)} rows={4} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.challenges} onChange={(e) => update('challenges', e.target.value)} rows={4} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Motivators" helperText={HELPER.motivators}>
-          <textarea value={data.motivators} onChange={(e) => update('motivators', e.target.value)} rows={2} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.motivators} onChange={(e) => update('motivators', e.target.value)} rows={2} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
 
-        <h2 className="text-slate-700 font-semibold text-base border-b border-slate-200 pb-2 mt-10">The Decision Path</h2>
+        <h2 className="text-norm-800 font-semibold text-base border-b border-slate-200 pb-2 mt-10">The Decision Path</h2>
         <PersonaSection title="Validators" helperText={HELPER.validators}>
           {data.validators.map((item, i) => (
             <div key={i} className="mb-2">
-              <input type="text" value={item} onChange={(e) => updateList('validators', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <input type="text" value={item} onChange={(e) => updateList('validators', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           ))}
-          <button type="button" onClick={() => addToList('validators')} className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <button type="button" onClick={() => addToList('validators')} className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium">
             <Plus className="w-4 h-4" /> Add another
           </button>
         </PersonaSection>
         <PersonaSection title="Why won't they buy? (Objections)" helperText={HELPER.objections}>
           {data.objections.map((item, i) => (
             <div key={i} className="mb-2">
-              <input type="text" value={item} onChange={(e) => updateList('objections', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <input type="text" value={item} onChange={(e) => updateList('objections', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           ))}
-          <button type="button" onClick={() => addToList('objections')} className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <button type="button" onClick={() => addToList('objections')} className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium">
             <Plus className="w-4 h-4" /> Add another
           </button>
         </PersonaSection>
         <PersonaSection title="What closes the deal? (Triggers)" helperText={HELPER.triggers}>
           {data.triggers.map((item, i) => (
             <div key={i} className="mb-2">
-              <input type="text" value={item} onChange={(e) => updateList('triggers', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <input type="text" value={item} onChange={(e) => updateList('triggers', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           ))}
-          <button type="button" onClick={() => addToList('triggers')} className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <button type="button" onClick={() => addToList('triggers')} className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium">
             <Plus className="w-4 h-4" /> Add another
           </button>
         </PersonaSection>
 
-        <h2 className="text-slate-700 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Engagement & Product Fit</h2>
+        <h2 className="text-norm-800 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Engagement & Product Fit</h2>
         <PersonaSection title="Communication Preferences" helperText={HELPER.communicationPreferences}>
-          <textarea value={data.communicationPreferences} onChange={(e) => update('communicationPreferences', e.target.value)} rows={3} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+          <textarea value={data.communicationPreferences} onChange={(e) => update('communicationPreferences', e.target.value)} rows={3} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
         </PersonaSection>
         <PersonaSection title="Most Valued Features" helperText={HELPER.mostValuedFeatures}>
           {data.mostValuedFeatures.map((item, i) => (
             <div key={i} className="mb-2">
-              <input type="text" value={item} onChange={(e) => updateList('mostValuedFeatures', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <input type="text" value={item} onChange={(e) => updateList('mostValuedFeatures', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           ))}
-          <button type="button" onClick={() => addToList('mostValuedFeatures')} className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <button type="button" onClick={() => addToList('mostValuedFeatures')} className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium">
             <Plus className="w-4 h-4" /> Add another
           </button>
         </PersonaSection>
         <PersonaSection title="Least Valued Features" helperText={HELPER.leastValuedFeatures}>
           {data.leastValuedFeatures.map((item, i) => (
             <div key={i} className="mb-2">
-              <input type="text" value={item} onChange={(e) => updateList('leastValuedFeatures', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <input type="text" value={item} onChange={(e) => updateList('leastValuedFeatures', i, e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           ))}
-          <button type="button" onClick={() => addToList('leastValuedFeatures')} className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <button type="button" onClick={() => addToList('leastValuedFeatures')} className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium">
             <Plus className="w-4 h-4" /> Add another
           </button>
         </PersonaSection>
 
-        <h2 className="text-slate-700 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Economic Indicators</h2>
+        <h2 className="text-norm-800 font-semibold text-base border-b border-slate-200 pb-2 mt-10">Economic Indicators</h2>
         <PersonaSection title="Price Point" helperText="Willingness to pay, target CAC, and projected LTV for this persona.">
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Willingness to Pay</label>
-              <input type="text" value={data.willingnessToPay} onChange={(e) => update('willingnessToPay', e.target.value)} placeholder="e.g. $X/month or $Y/year" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Willingness to Pay</label>
+              <input type="text" value={data.willingnessToPay} onChange={(e) => update('willingnessToPay', e.target.value)} placeholder="e.g. $X/month or $Y/year" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Customer Acquisition Cost (CAC)</label>
-              <input type="text" value={data.cac} onChange={(e) => update('cac', e.target.value)} placeholder="Target cost to convert" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Customer Acquisition Cost (CAC)</label>
+              <input type="text" value={data.cac} onChange={(e) => update('cac', e.target.value)} placeholder="Target cost to convert" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Lifetime Value (LTV)</label>
-              <input type="text" value={data.ltv} onChange={(e) => update('ltv', e.target.value)} placeholder="Projected total revenue" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800" />
+              <label className="block text-sm font-medium text-norm-700 mb-1">Lifetime Value (LTV)</label>
+              <input type="text" value={data.ltv} onChange={(e) => update('ltv', e.target.value)} placeholder="Projected total revenue" className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-norm-500 focus:border-norm-500 text-slate-800" />
             </div>
           </div>
         </PersonaSection>

@@ -27,7 +27,7 @@ function BattlecardSection({
     <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 h-full flex flex-col overflow-hidden">
       <h2 className="text-slate-800 font-semibold text-lg mb-1 flex items-center gap-2">
         {number > 0 && (
-          <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-blue-600 text-white text-sm font-bold shrink-0">
+          <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-norm-700 text-white text-sm font-bold shrink-0">
             {number}
           </span>
         )}
@@ -213,7 +213,7 @@ export default function BattlecardGenerator() {
             <button
               type="button"
               onClick={handleClear}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 text-norm-700 hover:bg-slate-200 transition-colors text-sm font-medium"
             >
               <Trash2 className="w-4 h-4" />
               Clear Form
@@ -221,7 +221,7 @@ export default function BattlecardGenerator() {
             <button
               type="button"
               onClick={handleExportPdf}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-norm-600 text-white hover:bg-norm-700 transition-colors text-sm font-medium"
             >
               <Download className="w-4 h-4" />
               Export PDF
@@ -250,7 +250,7 @@ export default function BattlecardGenerator() {
               type="text"
               value={data.yourName}
               onChange={(e) => setData((prev) => ({ ...prev, yourName: e.target.value }))}
-              className="w-full max-w-md rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-full max-w-md rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
               placeholder="Enter your name"
             />
           </BattlecardSection>
@@ -265,38 +265,38 @@ export default function BattlecardGenerator() {
           >
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">
+                <label className="block text-sm font-medium text-norm-700 mb-1">
                   Company / product description <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   value={data.overview.companyDescription}
                   onChange={(e) => updateOverview({ companyDescription: e.target.value })}
                   rows={4}
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
                   placeholder="Brief description of your company or product..."
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">
+                <label className="block text-sm font-medium text-norm-700 mb-1">
                   Audience <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   value={data.overview.audience}
                   onChange={(e) => updateOverview({ audience: e.target.value })}
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
                   placeholder="e.g. SMB sales leaders, enterprise procurement"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Top 1–3 features</label>
+                <label className="block text-sm font-medium text-norm-800 mb-2">Top 1–3 features</label>
                 {([0, 1, 2] as const).map((i) => (
                   <input
                     key={i}
                     type="text"
                     value={data.overview.topFeatures[i]}
                     onChange={(e) => updateTopFeature(i, e.target.value)}
-                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 mt-2 first:mt-0"
+                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500 mt-2 first:mt-0"
                     placeholder={`Feature ${i + 1}`}
                   />
                 ))}
@@ -312,34 +312,34 @@ export default function BattlecardGenerator() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Competitor 1 name</label>
+                  <label className="block text-sm font-medium text-norm-700 mb-1">Competitor 1 name</label>
                   <input
                     type="text"
                     value={data.differentiators.competitor1}
                     onChange={(e) => updateDifferentiators({ competitor1: e.target.value })}
-                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
                     placeholder="Competitor 1"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Competitor 2 name</label>
+                  <label className="block text-sm font-medium text-norm-700 mb-1">Competitor 2 name</label>
                   <input
                     type="text"
                     value={data.differentiators.competitor2}
                     onChange={(e) => updateDifferentiators({ competitor2: e.target.value })}
-                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
                     placeholder="Competitor 2"
                   />
                 </div>
               </div>
               <div className="overflow-x-auto">
               <div className="grid grid-cols-[minmax(80px,1fr)_repeat(3,minmax(100px,1fr))] gap-x-5 gap-y-0 text-sm">
-                <div className="py-2 font-medium text-slate-700 border-b border-slate-200">Metric</div>
-                <div className="py-2 font-medium text-slate-700 border-b border-slate-200 flex justify-center">You</div>
-                <div className="py-2 font-medium text-slate-700 border-b border-slate-200 flex justify-center">
+                <div className="py-2 font-medium text-norm-700 border-b border-slate-200">Metric</div>
+                <div className="py-2 font-medium text-norm-700 border-b border-slate-200 flex justify-center">You</div>
+                <div className="py-2 font-medium text-norm-700 border-b border-slate-200 flex justify-center">
                   {data.differentiators.competitor1 || 'Comp #1'}
                 </div>
-                <div className="py-2 font-medium text-slate-700 border-b border-slate-200 flex justify-center">
+                <div className="py-2 font-medium text-norm-700 border-b border-slate-200 flex justify-center">
                   {data.differentiators.competitor2 || 'Comp #2'}
                 </div>
                 {(
@@ -392,7 +392,7 @@ export default function BattlecardGenerator() {
                 type="text"
                 value={data.whyWeWin[i]}
                 onChange={(e) => updateWhyWeWin(i, e.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 mt-2 first:mt-0"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500 mt-2 first:mt-0"
                 placeholder={`Benefit ${i + 1} with proof`}
               />
             ))}
@@ -412,7 +412,7 @@ export default function BattlecardGenerator() {
                   type="text"
                   value={point}
                   onChange={(e) => updatePainPoint(i, e.target.value)}
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
                   placeholder="Example: vulnerable to data breaches, outdated email marketing solutions, unable to self-sufficiently conduct market research, etc."
                 />
               </div>
@@ -420,7 +420,7 @@ export default function BattlecardGenerator() {
             <button
               type="button"
               onClick={addPainPoint}
-              className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium"
+              className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium"
             >
               <Plus className="w-4 h-4" /> Add another
             </button>
@@ -452,7 +452,7 @@ export default function BattlecardGenerator() {
             <button
               type="button"
               onClick={addObjection}
-              className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium mt-2"
+              className="inline-flex items-center gap-1 text-sm text-norm-600 hover:text-norm-700 font-medium mt-2"
             >
               <Plus className="w-4 h-4" /> Add another
             </button>
@@ -497,7 +497,7 @@ export default function BattlecardGenerator() {
                 type="text"
                 value={data.questionsToAsk[i]}
                 onChange={(e) => updateQuestion(i, e.target.value)}
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 mt-2 first:mt-0"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500 mt-2 first:mt-0"
                 placeholder={`Strategic question ${i + 1}`}
               />
             ))}
@@ -512,14 +512,14 @@ export default function BattlecardGenerator() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-slate-200">
-                    <th className="text-left py-2 pr-4 font-medium text-slate-700"></th>
-                    <th className="text-left py-2 pr-4 font-medium text-slate-700">Monthly</th>
-                    <th className="text-left py-2 font-medium text-slate-700">Annual</th>
+                    <th className="text-left py-2 pr-4 font-medium text-norm-700"></th>
+                    <th className="text-left py-2 pr-4 font-medium text-norm-700">Monthly</th>
+                    <th className="text-left py-2 font-medium text-norm-700">Annual</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-slate-100">
-                    <td className="py-2 pr-4 font-medium text-slate-700">You</td>
+                    <td className="py-2 pr-4 font-medium text-norm-700">You</td>
                     <td className="py-2 pr-4">
                       <input
                         type="text"
@@ -540,7 +540,7 @@ export default function BattlecardGenerator() {
                     </td>
                   </tr>
                   <tr className="border-b border-slate-100">
-                    <td className="py-2 pr-4 font-medium text-slate-700">{data.differentiators.competitor1 || 'Comp #1'}</td>
+                    <td className="py-2 pr-4 font-medium text-norm-700">{data.differentiators.competitor1 || 'Comp #1'}</td>
                     <td className="py-2 pr-4">
                       <input
                         type="text"
@@ -559,7 +559,7 @@ export default function BattlecardGenerator() {
                     </td>
                   </tr>
                   <tr className="border-b border-slate-100">
-                    <td className="py-2 pr-4 font-medium text-slate-700">{data.differentiators.competitor2 || 'Comp #2'}</td>
+                    <td className="py-2 pr-4 font-medium text-norm-700">{data.differentiators.competitor2 || 'Comp #2'}</td>
                     <td className="py-2 pr-4">
                       <input
                         type="text"
@@ -594,7 +594,7 @@ export default function BattlecardGenerator() {
               value={data.quickTips}
               onChange={(e) => setData((prev) => ({ ...prev, quickTips: e.target.value }))}
               rows={4}
-              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
               placeholder="Sales tips and reminders..."
             />
           </BattlecardSection>
@@ -608,7 +608,7 @@ export default function BattlecardGenerator() {
               value={data.thirdPartyValidation}
               onChange={(e) => setData((prev) => ({ ...prev, thirdPartyValidation: e.target.value }))}
               rows={4}
-              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
               placeholder="Accreditations, endorsements, certifications..."
             />
           </BattlecardSection>
@@ -622,7 +622,7 @@ export default function BattlecardGenerator() {
               value={data.relevantCustomers}
               onChange={(e) => setData((prev) => ({ ...prev, relevantCustomers: e.target.value }))}
               rows={4}
-              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500"
               placeholder="Customer names, segments, or use case types..."
             />
           </BattlecardSection>
@@ -645,7 +645,7 @@ export default function BattlecardGenerator() {
               }
               placeholder="URL or text"
               rows={6}
-              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 min-h-[8rem] resize-y"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-slate-800 placeholder-slate-400 focus:border-norm-500 focus:ring-1 focus:ring-norm-500 min-h-[8rem] resize-y"
             />
           </BattlecardSection>
         </div>

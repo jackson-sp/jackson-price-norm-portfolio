@@ -42,7 +42,7 @@ const PortfolioGrid = () => {
     key={category.id}
     className={idx === content.categories.length - 1 ? 'mb-0' : 'mb-12'}
   >
-            <h2 className="text-2xl font-bold text-norm-500 mb-6 pb-2 border-b-2 border-norm-100">
+            <h2 className="text-2xl font-bold text-norm-700 mb-6 pb-2 border-b-2 border-norm-100">
               {category.title}
             </h2>
             <ResponsiveGrid>

@@ -8,7 +8,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
         <div className="flex items-center">
-          <Link to="/" className="text-lg font-semibold text-gray-800">
+          <Link to="/" className="text-lg font-semibold text-norm-800 hover:text-norm-700 transition-colors">
             Jackson Price
           </Link>
         </div>
@@ -16,14 +16,14 @@ const Header = () => {
             <a
               href="/Jackson Price Resume.pdf"
               download
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-norm-500 transition-colors"
-            >
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-norm-700 transition-colors"
+              >
               <FileText className="w-4 h-4" />
               Resume
             </a>
             <a
               href={content.profile.email}
-              className="text-gray-500 hover:text-norm-500 transition-colors"
+              className="text-gray-500 hover:text-norm-700 transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -32,7 +32,7 @@ const Header = () => {
               href={content.profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-norm-500 transition-colors"
+              className="text-gray-500 hover:text-norm-700 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />

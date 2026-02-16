@@ -8,19 +8,18 @@ export default {
     extend: {
       colors: {
         norm: {
-          50: '#eeeaff',
-          100: '#ddd6f9',
-          200: '#c6bcf2',
-          300: '#9e8ee5',
-          400: '#7259e0',
-          500: '#2800d7',
-          600: '#2300bd',
-          700: '#24079f',
-          800: '#220c81',
-          900: '#1f0f67',
-          950: '#160c40',
+          50:  '#eef4ff',
+          100: '#dbe7ff',
+          200: '#bfd3ff',
+          300: '#93b4ff',
+          400: '#5f8cff',
+          500: '#3a66f5',
+          600: '#2748db',
+          700: '#1f38b2',
+          800: '#1c318d',
+          900: '#1a2c73',
         },
-        accent: '#2800d7',
+        accent: '#2748db', // norm-600
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

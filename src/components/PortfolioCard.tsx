@@ -39,14 +39,14 @@ const PortfolioCard = ({ title, subheader, thumbnail, isExternal, onClick, hideT
         </div>
       )}
       <div className={`p-5 flex-1 flex flex-col ${hideThumbnail ? 'min-h-0' : 'min-h-[120px]'}`}>
-        <h3 className="text-lg font-semibold text-norm-500 mb-1 line-clamp-2">
+        <h3 className="text-lg font-semibold text-norm-800 mb-1 line-clamp-2">
           {title}
         </h3>
         {subheader && (
           <p className="text-sm text-gray-500 mb-4">{subheader}</p>
         )}
         <div className="mt-auto">
-          <span className="inline-flex items-center text-sm font-medium text-accent hover:text-norm-500 transition-colors">
+          <span className="inline-flex items-center text-sm font-medium text-norm-600 hover:text-norm-800 transition-colors">
             View
             {isExternal ? (
               <ExternalLink className="w-4 h-4 ml-1" />

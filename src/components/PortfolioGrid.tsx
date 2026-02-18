@@ -40,11 +40,16 @@ const PortfolioGrid = () => {
       {content.categories.map((category, idx) => (
   <div
     key={category.id}
-    className={idx === content.categories.length - 1 ? 'mb-0' : 'mb-12'}
+    className={idx === content.categories.length - 1 ? 'mb-0' : 'mb-16'}
   >
-            <h2 className="text-2xl font-bold text-norm-700 mb-6 pb-2 border-b-2 border-norm-100">
+            <h2 className="text-2xl font-bold text-norm-700 mb-3 pb-2 border-b border-norm-200">
               {category.title}
             </h2>
+            {(category as any).description && (
+  <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed max-w-5xl">
+    {(category as any).description}
+  </p>
+)}
             <ResponsiveGrid>
               {category.items.map((item: PortfolioItem) => (
                 <PortfolioCard

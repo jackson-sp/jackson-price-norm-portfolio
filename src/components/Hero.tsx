@@ -7,16 +7,16 @@ const Hero = () => {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-norm-700 mb-6">
           {content.profile.headline}
         </h1>
-        {content.profile.intro.map((line, index) => (
-          <p
-            key={index}
-            className={`text-base sm:text-lg text-gray-600 ${
-              index === 0 ? 'mb-2' : ''
-            }`}
-          >
-            {line}
-          </p>
-        ))}
+
+        {/* Credentials */}
+        <p className="text-base sm:text-lg text-slate-600 mb-6">
+          {content.profile.intro[0]}
+        </p>
+
+        {/* Positioning statement */}
+        <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Bridging strategic communications, product, and analytics to translate complex technical systems into clear strategy, positioning, and execution
+        </p>
       </div>
     </section>
   );

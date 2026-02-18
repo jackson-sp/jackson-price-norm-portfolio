@@ -72,16 +72,20 @@ export default function CaseStudies() {
   return (
     <section className="pt-10 pb-16">
       <PageContainer>
-        <h2 className="text-2xl font-bold text-norm-700 mb-6 pb-2 border-b-2 border-norm-100">
-          Strategic Growth Case Studies
-        </h2>
+      <h2 className="text-2xl font-bold text-norm-700 mb-3 pb-2 border-b border-norm-200">
+        Case Studies
+      </h2>
+
+      <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed max-w-5xl">
+        Work samples include a global cross-functional launch, deep tech storytelling, GTM strategy, and end-to-end product development.
+      </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {caseStudies.map((cs) => (
             <button
               key={cs.id}
               onClick={() => setActive(cs)}
-              className="relative overflow-hidden flex items-center justify-center w-full min-h-[80px] px-6 py-5 bg-gradient-to-br from-norm-600 to-norm-800 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-[2px] transition-all duration-200 text-center ring-1 ring-white/10 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-t before:from-white/10 before:to-transparent before:pointer-events-none"
+              className="relative overflow-hidden flex items-center justify-center w-full min-h-[76px] px-6 py-3 bg-gradient-to-br from-norm-600 to-norm-800 text-white text-base font-medium rounded-xl shadow-md hover:shadow-lg hover:-translate-y-[1px] transition-all duration-200 text-center ring-1 ring-white/10 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-t before:from-white/10 before:to-transparent before:pointer-events-none"
               >
               {cs.title}
             </button>

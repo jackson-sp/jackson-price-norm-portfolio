@@ -4,101 +4,105 @@
     "headline": "Jackson Price Portfolio",
     "intro": [
       "MIT Sloan MBA | MIT AI Club President | University of Pennsylvania | ex-Amazon",
-      "Product | Marketing | Growth | Storytelling"
+      "Strategic Communications | Product | Analytics"
     ],
     "email": "mailto:jprice26@mit.edu",
     "linkedin": "https://www.linkedin.com/in/jacksonshawprice"
   },
   "categories": [
-    {
-      "id": "slides",
-      "title": "Slide Decks",
-      "items": [
-        {
-          "id": "ai-club-survey",
-          "title": "AI Club Member Survey",
-          "subheader": "MIT Sloan",
-          "file": "/pdfs/ai-club-survey.pdf",
-          "thumbnail": "/portfolio-assets/slides/ai-club-survey.png"
-        },
-        {
-          "id": "product-design",
-          "title": "Product Design Class Presentation",
-          "subheader": "MIT Sloan",
-          "file": "/pdfs/product-design.pdf",
-          "thumbnail": "/portfolio-assets/slides/product-design.png"
-        },
-        {
-          "id": "operations-analytics",
-          "title": "Operations Analytics Class Presentation",
-          "subheader": "MIT Sloan",
-          "file": "/pdfs/wildfires.pdf",
-          "thumbnail": "/portfolio-assets/slides/wildfires.png"
-        }
-      ]
-    },
-    {
-      "id": "benchmark-reports",
-      "title": "Benchmark Reports",
-      "items": [
-        {
-          "id": "inventory-management",
-          "title": "Inventory Management",
-          "subheader": "Netstock",
-          "file": "/pdfs/netstock.pdf",
-          "thumbnail": "/portfolio-assets/benchmark-reports/netstock.png"
-        },
-        {
-          "id": "trucking-logistics",
-          "title": "Trucking and Logistics",
-          "subheader": "Uber Freight",
-          "file": "/pdfs/uber-freight.pdf",
-          "thumbnail": "/portfolio-assets/benchmark-reports/uber-freight.png"
-        },
-        {
-          "id": "enterprise-blockchain",
-          "title": "Enterprise Blockchain",
-          "subheader": "Casper Labs",
-          "file": "/pdfs/casper-labs.pdf",
-          "thumbnail": "/portfolio-assets/benchmark-reports/casper-labs.png"
-        }
-      ]
-    },
-    {
-      "id": "technical-launches",
-      "title": "Technical Launches",
-      "items": [
-        {
-          "id": "simulator-launch",
-          "title": "Self-Driving Simulator",
-          "subheader": "Waabi",
-          "file": "",
-          "thumbnail": "/portfolio-assets/technical-launches/waabi-world.webp",
-          "externalUrl": "https://waabi.ai/insights/how-waabi-world-works"
-        },
-        {
-          "id": "software-launch",
-          "title": "Self-Driving Software",
-          "subheader": "Waabi",
-          "file": "",
-          "thumbnail": "/portfolio-assets/technical-launches/waabi-driver.png",
-          "externalUrl": "https://waabi.ai/insights/introducing-the-waabi-driver"
-        }
-      ]
-    },
-    {
-      "id": "thought-leadership",
-      "title": "Thought Leadership",
-      "items": [
-        {
-          "id": "data-orchestration",
-          "title": "Non-Linear Data Orchestration",
-          "subheader": "General Catalyst",
-          "file": "",
-          "thumbnail": "/portfolio-assets/thought-leadership/forbes.png",
-          "externalUrl": "https://www.forbes.com/councils/forbesbusinesscouncil/2022/12/28/enterprises-path-to-non-linearity-in-data/"
-        }
-      ]
-    }
-  ]
+  {
+    "id": "technical-launches",
+    "title": "Technical Launches",
+    "description": "PhD-level autonomous driving technology, distilled into market-ready positioning and announcement posts during period of rapid growth.",
+    "items": [
+      {
+        "id": "simulator-launch",
+        "title": "Self-Driving Simulator",
+        "subheader": "Waabi",
+        "file": "",
+        "thumbnail": "/portfolio-assets/technical-launches/waabi-world.webp",
+        "externalUrl": "https://waabi.ai/insights/how-waabi-world-works"
+      },
+      {
+        "id": "software-launch",
+        "title": "Self-Driving Software",
+        "subheader": "Waabi",
+        "file": "",
+        "thumbnail": "/portfolio-assets/technical-launches/waabi-driver.png",
+        "externalUrl": "https://waabi.ai/insights/introducing-the-waabi-driver"
+      }
+    ]
+  },
+  {
+    "id": "benchmark-reports",
+    "title": "Insight Reports",
+    "description": "Data-driven insight reports that shaped clients' executive messaging and positioning, and served as durable Sales & Marketing assets.",
+    "items": [
+      {
+        "id": "inventory-management",
+        "title": "Inventory Management",
+        "subheader": "Netstock",
+        "file": "/pdfs/netstock.pdf",
+        "thumbnail": "/portfolio-assets/benchmark-reports/netstock.png"
+      },
+      {
+        "id": "trucking-logistics",
+        "title": "Trucking and Logistics",
+        "subheader": "Uber Freight",
+        "file": "/pdfs/uber-freight.pdf",
+        "thumbnail": "/portfolio-assets/benchmark-reports/uber-freight.png"
+      },
+      {
+        "id": "enterprise-blockchain",
+        "title": "Enterprise Blockchain",
+        "subheader": "Casper Labs",
+        "file": "/pdfs/casper-labs.pdf",
+        "thumbnail": "/portfolio-assets/benchmark-reports/casper-labs.png"
+      }
+    ]
+  },
+  {
+    "id": "thought-leadership",
+    "title": "Thought Leadership",
+    "description": "Published Forbes article ghostwritten on behalf of a highly technical Managing Director at General Catalyst.",
+    "items": [
+      {
+        "id": "data-orchestration",
+        "title": "Non-Linear Data Orchestration",
+        "subheader": "General Catalyst",
+        "file": "",
+        "thumbnail": "/portfolio-assets/thought-leadership/forbes.png",
+        "externalUrl": "https://www.forbes.com/councils/forbesbusinesscouncil/2022/12/28/enterprises-path-to-non-linearity-in-data/"
+      }
+    ]
+  },
+  {
+    "id": "slides",
+    "title": "Sample Slide Decks",
+    "description": "Presentations that demonstrate structured thinking and executive-level communication for analytical, product, and leadership audiences.",
+    "items": [
+      {
+        "id": "operations-analytics",
+        "title": "Operations Analytics Class Presentation",
+        "subheader": "MIT Sloan",
+        "file": "/pdfs/wildfires.pdf",
+        "thumbnail": "/portfolio-assets/slides/wildfires.png"
+      },
+      {
+        "id": "product-design",
+        "title": "Product Design Class Presentation",
+        "subheader": "MIT Sloan",
+        "file": "/pdfs/product-design.pdf",
+        "thumbnail": "/portfolio-assets/slides/product-design.png"
+      },
+      {
+        "id": "ai-club-survey",
+        "title": "AI Club Member Survey",
+        "subheader": "MIT Sloan",
+        "file": "/pdfs/ai-club-survey.pdf",
+        "thumbnail": "/portfolio-assets/slides/ai-club-survey.png"
+      }
+    ]
+  }
+]
 }

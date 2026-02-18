@@ -67,7 +67,7 @@ const Workflow = () => {
           onClick={() => setIsOpen(true)}
           className="px-6 py-3 bg-norm-600 text-white font-semibold rounded-lg hover:bg-norm-700 transition-colors shadow-md hover:shadow-lg"
           >
-          How I Created This Site
+          How I Created this Site
         </button>
       </div>
 

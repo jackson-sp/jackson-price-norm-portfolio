@@ -5,6 +5,7 @@ import HomeGenerators from '../components/HomeGenerators';
 import PortfolioGrid from '../components/PortfolioGrid';
 import Workflow from '../components/Workflow';
 import Footer from '../components/Footer';
+import About from '../components/About';
 
 const Index = () => {
   return (
@@ -12,9 +13,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <PortfolioGrid />
         <CaseStudies />
         <HomeGenerators />
-        <PortfolioGrid />
+        <About />
         <Workflow />
       </main>
       <Footer />

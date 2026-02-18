@@ -9,12 +9,12 @@ import About from '../components/About';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       <Header />
       <main>
         <Hero />
-        <PortfolioGrid />
         <CaseStudies />
+        <PortfolioGrid />
         <HomeGenerators />
         <About />
         <Workflow />

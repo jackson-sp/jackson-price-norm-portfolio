@@ -28,7 +28,7 @@ const caseStudies: CaseStudy[] = [
     problem:
       "Waabi, a Canadian self-driving startup founded by AI icon Raquel Urtasun, emerged out of stealth amidst high public mistrust of AV. Headlines of incumbents' failures put the industry under a microscope. Waabi was a no-name newcomer that needed airtight storytelling to elevate into a trusted partner.",
     solution:
-      "I owned the launch and positioning strategy for Waabi's $83.5M Series A fundraise and first several major product and partnership announcements.",
+      "I led positioning, messsaging, and launch strategy for Waabi's $83.5M Series A fundraise and first several major product and partnership announcements.",
     result:
       'My storytelling brought Waabi to the industry forefront. It has since landed partnerships with NVIDIA and Volvo, and ultimately raised an additional $200M in 2024 and $750M in 2026.',
   },
@@ -77,7 +77,7 @@ export default function CaseStudies() {
       </h2>
 
       <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed max-w-5xl">
-        Work samples include a global cross-functional launch, deep tech storytelling, GTM strategy, and end-to-end product development.
+        Selected case studies spanning cross-functional launches, deep tech positioning and storytelling, GTM strategy, and end-to-end product development.
       </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

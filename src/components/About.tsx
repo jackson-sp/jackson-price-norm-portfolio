@@ -14,7 +14,7 @@ export default function About() {
           </p>
 
           <p>
-            I specialize in translating complex innovation into clear, compelling, and actionable strategies. My experience spans technical narrative, product development, analytics, AI, and GTM—always in highly cross-functional environments.
+            I specialize in translating cutting-edge innovation into clear, compelling, and actionable strategies. My experience spans technical narrative, product development, analytics, AI, and GTM—always in highly cross-functional environments.
           </p>
 
           <p>

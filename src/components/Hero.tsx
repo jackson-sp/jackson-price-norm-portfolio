@@ -15,9 +15,7 @@ const Hero = () => {
 
         {/* Positioning statement */}
         <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-        Strategic communications professional with product and analytical depth,
-        <br className="hidden sm:block" />
-        translating complex technical systems into clear strategy, positioning, and business outcomes
+        Translating complex technical systems into clear strategy, positioning, and business outcomes
         </p>
       </div>
     </section>

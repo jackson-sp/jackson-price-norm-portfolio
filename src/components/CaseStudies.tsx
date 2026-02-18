@@ -77,7 +77,7 @@ export default function CaseStudies() {
       </h2>
 
       <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed max-w-5xl">
-        Selected case studies spanning cross-functional launches, deep tech positioning and storytelling, GTM strategy, and end-to-end product development.
+        Selected case studies spanning cross-functional launches, deep tech storytelling, GTM strategy, and end-to-end product development.
       </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

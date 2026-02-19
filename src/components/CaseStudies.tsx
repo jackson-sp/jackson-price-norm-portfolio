@@ -73,7 +73,7 @@ export default function CaseStudies() {
     <section className="pt-10 pb-16">
       <PageContainer>
       <h2 className="text-2xl font-bold text-norm-700 mb-3 pb-2 border-b border-norm-200">
-        Case Studies
+        Strategic Projects
       </h2>
 
       <p className="text-sm sm:text-base text-slate-600 mb-4 leading-relaxed max-w-5xl">

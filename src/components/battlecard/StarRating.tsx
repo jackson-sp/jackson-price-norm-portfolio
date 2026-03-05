@@ -15,7 +15,7 @@ export function StarRating({ value, onChange, size = 'md' }: StarRatingProps) {
           key={star}
           type="button"
           onClick={() => onChange(star)}
-          className={`${sizeClass} p-0.5 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1`}
+          className={`${sizeClass} p-0.5 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-norm-500 focus:ring-offset-1`}
           aria-label={`${star} star${star > 1 ? 's' : ''}`}
         >
           <Star

@@ -62,6 +62,68 @@
     ]
   },
   {
+    "id": "press",
+    "title": "Press",
+    "description": "Earned media highlights in business and tech publications.",
+    "items": [
+      {
+        "id": "forbes-aurora-uber-freight",
+        "title": "Aurora To Offer Its Autonomous Truck Service Through Uber Freight",
+        "subheader": "Uber Freight",
+        "publication": "Forbes",
+        "file": "",
+        "thumbnail": "",
+        "externalUrl": "https://www.forbes.com/sites/alanohnsman/2021/12/15/aurora-to-offer-its-autonomous-truck-service-through-uber-freight/"
+      },
+      {
+        "id": "wsj-transplace",
+        "title": "Uber’s Freight Unit to Buy Logistics Tech Firm Transplace for $2.25 Billion",
+        "subheader": "Uber Freight",
+        "publication": "The Wall Street Journal",
+        "file": "",
+        "thumbnail": "",
+        "externalUrl": "https://www.wsj.com/articles/ubers-freight-unit-to-buy-logistics-tech-firm-transplace-for-2-25-billion-11626963852?gaa_at=eafs&gaa_n=AWEtsqfw2a36yG9d5N96tmiXBB27V0mOoPmQtE0miT_PWuL4PL9B7iuFHQcwsupbuEY%3D&gaa_ts=69aa090f&gaa_sig=_egSDwIu1hxiu-o7vW-7lCdO_Czi0Uh1RkIBQjui8WybYtg2jao9AoY620sskQ2yOqrAQRLIYt2tqmL6pMC71Q%3D%3D"
+      },
+      {
+        "id": "mit-tech-review-virtual-world",
+        "title": "This super-realistic virtual world is a driving school for AI",
+        "subheader": "Waabi",
+        "publication": "MIT Technology Review",
+        "file": "",
+        "thumbnail": "",
+        "externalUrl": "https://www.technologyreview.com/2022/02/18/1045784/simulation-virtual-world-driverless-car-autonomous-vehicle-school-ai-cruise-waabi/"
+      },
+      {
+        "id": "verge-waabi-raise",
+        "title": "Waabi, the rare autonomous vehicle startup with a woman CEO, raises $83.5 million",
+        "subheader": "Waabi",
+        "publication": "The Verge",
+        "file": "",
+        "thumbnail": "",
+        "externalUrl": "https://www.theverge.com/2021/6/8/22522824/waabi-raquel-urtasun-autonomous-vehicle-startup-stealth-funding"
+      },
+      {
+        "id": "fast-company-ai-apps",
+        "title": "The most innovative AI applications today have this in common",
+        "subheader": "General Catalyst",
+        "publication": "Fast Company",
+        "file": "",
+        "thumbnail": "",
+        "externalUrl": "https://www.fastcompany.com/91033174/applied-ai-spotlight-most-innovative-companies-2024"
+      },
+      {
+        "id": "axios-hippocratic",
+        "title": "Medical LLM developer Hippocratic AI gets $53M at $500 valuation",
+        "subheader": "General Catalyst",
+        "publication": "Axios",
+        "file": "",
+        "thumbnail": "",
+        "externalUrl": "https://www.axios.com/pro/health-tech-deals/2024/03/19/hippocratic-ai-53-million-medical-llm"
+      }
+    ]
+  }
+  ,
+  {
     "id": "thought-leadership",
     "title": "Thought Leadership",
     "description": "Published Forbes article ghostwritten on behalf of a highly technical Managing Director at General Catalyst.",

@@ -12,6 +12,7 @@ interface PortfolioItem {
   subheader: string;
   file?: string;
   thumbnail: string;
+  publication?: string;
   externalUrl?: string;
   route?: string;
 }
@@ -50,22 +51,41 @@ const PortfolioGrid = () => {
     {(category as any).description}
   </p>
 )}
-            <ResponsiveGrid>
-              {category.items.map((item: PortfolioItem) => (
-                <PortfolioCard
-                  key={item.id}
-                  title={item.title}
-                  subheader={item.subheader}
-                  thumbnail={
-                    item.id === 'enterprise-blockchain'
-                      ? '/portfolio-assets/benchmark-reports/casper-labs.png'
-                      : item.thumbnail
-                  }
-                  isExternal={!!item.externalUrl || !!item.route}
-                  onClick={() => handleItemClick(item)}
-                />
-              ))}
-            </ResponsiveGrid>
+            {category.id === 'press' ? (
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {category.items.map((item: PortfolioItem) => (
+      <PortfolioCard
+        key={item.id}
+        title={item.title}
+        subheader={item.subheader}
+        thumbnail={item.thumbnail}
+        publication={(item as any).publication}
+        hideThumbnail={true}
+        isExternal={!!item.externalUrl || !!item.route}
+        onClick={() => handleItemClick(item)}
+      />
+    ))}
+  </div>
+) : (
+  <ResponsiveGrid>
+    {category.items.map((item: PortfolioItem) => (
+      <PortfolioCard
+        key={item.id}
+        title={item.title}
+        subheader={item.subheader}
+        thumbnail={
+          item.id === 'enterprise-blockchain'
+            ? '/portfolio-assets/benchmark-reports/casper-labs.png'
+            : item.thumbnail
+        }
+        publication={(item as any).publication}
+        hideThumbnail={category.id === 'press' || !!(item as any).publication}
+        isExternal={!!item.externalUrl || !!item.route}
+        onClick={() => handleItemClick(item)}
+      />
+    ))}
+  </ResponsiveGrid>
+)}
           </div>
         ))}
       </PageContainer>

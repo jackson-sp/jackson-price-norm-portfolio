@@ -45,11 +45,11 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'mobility',
     title:
-      'Turning a class project idea into a commercially-viable, patent pending product',
+      'Turning a class project idea into a commercially-viable, patent pending product with 3D printing',
     problem:
       'I was the only MBA student in a team of engineers, designers, and data analysts. Our assignment was vague: solve a pain point related to moving heavy objects.',
     solution:
-      'I led the team through 30+ customer interviews, product ideation and iteration, and user prototype testing until we converged on a single solution. I also built a thorough GTM/partnership strategy and pricing model.',
+      'I led the team through 30+ customer interviews, product ideation and iteration, and user testing of our 3D-printed prototype until we converged on a single solution. I also built a thorough GTM/partnership strategy and pricing model.',
     result:
       'Our product won the class competition and we are working with IP attorneys to patent the invention.',
   },

@@ -56,29 +56,29 @@ const PortfolioCard = ({
         // PRESS: compact text-only
         <div className="p-4 min-h-[120px] flex flex-col">
           {publication && (
-            <div className="font-semibold text-norm-800 text-sm leading-snug">
+            <div className="font-semibold text-norm-800 text-lg leading-snug">
               {publication}
             </div>
           )}
 
-          <div className="mt-1 text-sm text-norm-800 leading-snug">
+          <div className="mt-1 text-base text-norm-800 leading-snug">
             {title}
           </div>
 
           {subheader && (
-            <div className="mt-auto pt-3 text-xs text-gray-500">
+            <div className="mt-auto pt-3 text-sm text-gray-500">
               {subheader}
             </div>
           )}
         </div>
       ) : (
         // DEFAULT: all other cards (no "View" CTA)
-        <div className="p-5 flex-1 flex flex-col min-h-[110px]">
+        <div className="p-5 flex-1 flex flex-col min-h-[100px]">
           <h3 className="text-lg font-semibold text-norm-800 mb-1 line-clamp-2">
             {title}
           </h3>
           {subheader && (
-            <p className="text-sm text-gray-500 mb-0">{subheader}</p>
+            <p className="mt-auto pt-3 text-sm text-gray-500 mb-0">{subheader}</p>
           )}
         </div>
       )}

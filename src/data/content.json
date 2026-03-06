@@ -12,15 +12,15 @@
   "categories": [
   {
     "id": "technical-launches",
-    "title": "Technical Launches",
-    "description": "Announcement posts distilling complex self-driving technology into market-ready positioning for business audiences.",
+    "title": "Product Launches",
+    "description": "Announcement posts distilling complex technology into market-ready positioning for business audiences.",
     "items": [
       {
         "id": "simulator-launch",
         "title": "Self-Driving Simulator",
         "subheader": "Waabi",
         "file": "",
-        "thumbnail": "/portfolio-assets/technical-launches/waabi-world.webp",
+        "thumbnail": "/portfolio-assets/technical-launches/waabi-world-static.png",
         "externalUrl": "https://waabi.ai/insights/how-waabi-world-works"
       },
       {
@@ -30,6 +30,14 @@
         "file": "",
         "thumbnail": "/portfolio-assets/technical-launches/waabi-driver.png",
         "externalUrl": "https://waabi.ai/insights/introducing-the-waabi-driver"
+      },
+      {
+        "id": "ltl-shipping",
+        "title": "LTL Shipping Solution",
+        "subheader": "Uber Freight",
+        "file": "",
+        "thumbnail": "/portfolio-assets/technical-launches/ltl-trucking.png",
+        "externalUrl": "https://www.uberfreight.com/en-US/blog/uber-freight-enhances-ltl-capabilities"
       }
     ]
   },
@@ -46,18 +54,18 @@
         "thumbnail": "/portfolio-assets/benchmark-reports/netstock.png"
       },
       {
-        "id": "trucking-logistics",
-        "title": "Trucking and Logistics",
-        "subheader": "Uber Freight",
-        "file": "/pdfs/uber-freight.pdf",
-        "thumbnail": "/portfolio-assets/benchmark-reports/uber-freight.png"
-      },
-      {
         "id": "enterprise-blockchain",
         "title": "Enterprise Blockchain",
         "subheader": "Casper Labs",
         "file": "/pdfs/casper-labs.pdf",
         "thumbnail": "/portfolio-assets/benchmark-reports/casper-labs.png"
+      },
+      {
+        "id": "trucking-logistics",
+        "title": "Trucking and Logistics",
+        "subheader": "Uber Freight",
+        "file": "/pdfs/uber-freight.pdf",
+        "thumbnail": "/portfolio-assets/benchmark-reports/uber-freight.png"
       }
     ]
   },
@@ -126,15 +134,23 @@
   {
     "id": "thought-leadership",
     "title": "Thought Leadership",
-    "description": "Published Forbes article ghostwritten on behalf of a highly technical Managing Director at General Catalyst.",
+    "description": "Published articles ghostwritten on behalf of highly technical executives.",
     "items": [
       {
         "id": "data-orchestration",
         "title": "Non-Linear Data Orchestration",
-        "subheader": "General Catalyst",
+        "subheader": "General Catalyst (Managing Director)",
         "file": "",
         "thumbnail": "/portfolio-assets/thought-leadership/forbes.png",
         "externalUrl": "https://www.forbes.com/councils/forbesbusinesscouncil/2022/12/28/enterprises-path-to-non-linearity-in-data/"
+      },
+      {
+        "id": "composable-data",
+        "title": "Composable Data Analytics",
+        "subheader": "GoodData (Founder & CEO)",
+        "file": "",
+        "thumbnail": "/portfolio-assets/thought-leadership/roman-data.png",
+        "externalUrl": "https://insideainews.com/2021/12/22/how-digital-transformation-created-a-problem-only-composable-analytics-can-solve/"
       }
     ]
   },
@@ -145,14 +161,14 @@
     "items": [
       {
         "id": "operations-analytics",
-        "title": "Operations Analytics Class Presentation",
+        "title": "Machine Learning Presentation",
         "subheader": "MIT Sloan",
         "file": "/pdfs/wildfires.pdf",
         "thumbnail": "/portfolio-assets/slides/wildfires.png"
       },
       {
         "id": "product-design",
-        "title": "Product Design Class Presentation",
+        "title": "Product Design Presentation",
         "subheader": "MIT Sloan",
         "file": "/pdfs/product-design.pdf",
         "thumbnail": "/portfolio-assets/slides/product-design.png"

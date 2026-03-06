@@ -20,9 +20,7 @@ const PortfolioCard = ({
 }: PortfolioCardProps) => {
   return (
     <div
-      className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden border border-gray-100 ${
-        hideThumbnail ? '' : 'h-full flex flex-col'
-      }`}
+      className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden border border-gray-100 h-full flex flex-col"
       onClick={onClick}
     >
       {/* Only show thumbnail for non-press cards */}
@@ -54,14 +52,14 @@ const PortfolioCard = ({
       {/* Content */}
       {hideThumbnail ? (
         // PRESS: compact text-only
-        <div className="p-4 min-h-[120px] flex flex-col">
+        <div className="p-4 min-h-[110px] flex flex-col h-full">
           {publication && (
             <div className="font-semibold text-norm-800 text-lg leading-snug">
               {publication}
             </div>
           )}
 
-          <div className="mt-1 text-base text-norm-800 leading-snug">
+          <div className="mt-1 text-base text-norm-800 leading-snug line-clamp-2">
             {title}
           </div>
 
